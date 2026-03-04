@@ -4,24 +4,24 @@ on:
 jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest
-    steps: 
-      - name: "SO Ubuntu"
+    steps:
+      - name: "Mostrar SO"
         run: |
-        echo "Este trabajo se ejecuta en un Runner de Ubuntu"
-        echo $RUNNER_OS
+          echo "Este trabajo se ejecuta en un Runner de Ubuntu"
+          echo $RUNNER_OS
     windows-echo:
     runs-on: windows-latest
     steps: 
-      - name: "SO Windows"
+      - name: "Mostrar SO"
         run: |
-        echo "Este trabajo se ejecuta en un Runner de Windows"
-        echo $RUNNER_OS
+          echo "Este trabajo se ejecuta en un Runner de Windows"
+          echo $RUNNER_OS
     macos-echo:
     runs-on: macos-latest
     steps: 
-      - name: "SO macOS"
+      - name: "Mostrar SO"
         run: |
-        echo "Este trabajo se ejecuta en un Runner de macOS"
-        echo $RUNNER_OS
+          echo "Este trabajo se ejecuta en un Runner de macOS"
+          echo $RUNNER_OS
         
   
