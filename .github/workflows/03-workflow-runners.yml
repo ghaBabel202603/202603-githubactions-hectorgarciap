@@ -9,19 +9,22 @@ jobs:
         run: |
           echo "Este trabajo se ejecuta en un Runner de Ubuntu"
           echo $RUNNER_OS
-    windows-echo:
+
+  windows-echo:
     runs-on: windows-latest
-    steps: 
+    steps:
       - name: "Mostrar SO"
+        shell: bash
         run: |
           echo "Este trabajo se ejecuta en un Runner de Windows"
           echo $RUNNER_OS
-    macos-echo:
+
+  macos-echo:
     runs-on: macos-latest
-    steps: 
+    steps:
       - name: "Mostrar SO"
+        shell: bash
         run: |
           echo "Este trabajo se ejecuta en un Runner de macOS"
           echo $RUNNER_OS
-        
-  
+
