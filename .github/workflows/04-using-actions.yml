@@ -12,6 +12,6 @@ jobs:
         with:
           node-version: '20.x'
       - name: 'Install dependencies'
-        working-directory: /workspaces/202603-githubactions-hectorgarciap/my-app
+        working-directory: my-app
         run: npm install
           
