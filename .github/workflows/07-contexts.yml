@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       MY_VAR_TWO: "Hello, I'm a second variable from GitHub Actions!"
-      DEBUG_MODE: false
     steps:
       - name: Show GitHub Context
         run: |
@@ -30,5 +29,14 @@ jobs:
 
       - name: Print my second var
         run: echo "MY_VAR_TWO = $MY_VAR_TWO"
+
+      - name: Check debug input
+        run: | 
+            if [ "${{ inputs.debug }}" = "true" ]; then
+                echo "Debug mode is ON"
+                echo "Debug info: Event ${{ github.event_name }}, Actor ${{ github.actor }}"
+            else
+                echo "Debug mode is OFF"
+            fi
 
 
