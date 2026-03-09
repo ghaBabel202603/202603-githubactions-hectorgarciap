@@ -28,7 +28,7 @@ jobs:
         run: echo "MY_VAR = ${{ vars.MY_VAR }}"
 
       - name: Print my second var
-        run: echo "MY_VAR_TWO = $MY_VAR_TWO"
+        run: echo "MY_VAR_TWO =  ${{ env.MY_VAR_TWO }}"
 
       - name: Check debug input
         run: | 
